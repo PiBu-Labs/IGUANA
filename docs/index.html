@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="IGUANA: Immersive Guidance, Navigation, and Control for Consumer UAV">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="IGUANA is an MR-based interface for UAV guidance, navigation, and control. IGUANA offers (1) high-level control via a 3D map interface, (2) low-level control via a virtual ball interface, and (3) enhanced situational awareness through a spatial overlay.">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="Unmanned Aerial Vehicle, Drone, Spatial User Interface, 3D User Interface, Mixed Reality, Augmented Reality">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Victor Victor, Tania Krisanty, Matthew McGinity, Stefan Gumhold, Uwe Aßmann">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="Technische Universität Dresden">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="IGUANA: Immersive Guidance, Navigation, and Control for Consumer UAV">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="IGUANA is an MR-based interface for UAV guidance, navigation, and control. IGUANA offers (1) high-level control via a 3D map interface, (2) low-level control via a virtual ball interface, and (3) enhanced situational awareness through a spatial overlay.">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://pibu-labs.github.io/IGUANA">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://pibu-labs.github.io/IGUANA/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IGUANA - Teaser Image">
+  <meta property="article:published_time" content="2025-11-12T00:00:00.000Z">
+  <meta property="article:author" content="Victor Victor">
+  <meta property="article:author" content="Tania Krisanty">
+  <meta property="article:author" content="Matthew McGinity">
+  <meta property="article:author" content="Stefan Gumhold">
+  <meta property="article:author" content="Uwe Aßmann">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Unmanned Aerial Vehicle">
+  <meta property="article:tag" content="Drone">
+  <meta property="article:tag" content="Spatial User Interface">
+  <meta property="article:tag" content="3D User Interface">
+  <meta property="article:tag" content="Mixed Reality">
+  <meta property="article:tag" content="Augmented Reality">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@tudresden_de">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@victorjunaidy">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="IGUANA: Immersive Guidance, Navigation, and Control for Consumer UAV">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="IGUANA is an MR-based interface for UAV guidance, navigation, and control. IGUANA offers (1) high-level control via a 3D map interface, (2) low-level control via a virtual ball interface, and (3) enhanced situational awareness through a spatial overlay.">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://pibu-labs.github.io/IGUANA/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="IGUANA - Teaser Image">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="IGUANA: Immersive Guidance, Navigation, and Control for Consumer UAV">
+  <meta name="citation_author" content="Victor, Victor">
+  <meta name="citation_author" content="Krisanty, Tania">
+  <meta name="citation_author" content="McGinity, Matthew">
+  <meta name="citation_author" content="Gumhold, Stefan">
+  <meta name="citation_author" content="Aßmann, Uwe">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="VRST 2025">
+  <meta name="citation_pdf_url" content="https://pibu-labs.github.io/IGUANA/static/pdfs/iguana-author-version.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>IGUANA: Immersive Guidance, Navigation, and Control for Consumer UAV</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "IGUANA: Immersive Guidance, Navigation, and Control for Consumer UAV",
+    "description": "IGUANA is an MR-based interface for UAV guidance, navigation, and control. IGUANA offers (1) high-level control via a 3D map interface, (2) low-level control via a virtual ball interface, and (3) enhanced situational awareness through a spatial overlay.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Victor Victor",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technische Universität Dresden"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Tania Krisanty",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technische Universität Dresden"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Matthew McGinity",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technische Universität Dresden"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Stefan Gumhold",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technische Universität Dresden"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Uwe Aßmann",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technische Universität Dresden"
+        }
+      }
+    ],
+    "datePublished": "2025-11-12",
+    "publisher": {
+      "@type": "Organization",
+      "name": "VRST 2025",
+    },
+    "url": "https://pibu-labs.github.io/IGUANA",
+    "image": "https://pibu-labs.github.io/IGUANA/static/images/social_preview.png",
+    "keywords": ["Unmanned Aerial Vehicle", "Drone", "Spatial User Interface", "3D User Interface", "Mixed Reality", "Augmented Reality"],
+    "abstract": "As the markets for unmanned aerial vehicles (UAVs) and mixed reality (MR) headsets continue to grow, recent research has increasingly explored their integration, which enables more intuitive, immersive, and situationally aware control systems. We present IGUANA, an MR-based immersive guidance, navigation, and control system for consumer UAVs. IGUANA introduces three key elements beyond conventional control interfaces: (1) a 3D terrain map interface with draggable waypoint markers and live camera preview for high-level control, (2) a novel spatial control metaphor that uses a virtual ball as a physical analogy for low-level control, and (3) a spatial overlay that helps track the UAV when it is not visible with the naked eye or visual line of sight is interrupted. We conducted a user study to evaluate our design, both quantitatively and qualitatively, and found that (1) the 3D map interface is intuitive and easy to use, relieving users from manual control and suggesting improved accuracy and consistency with lower perceived workload relative to conventional dual-stick controller, (2) the virtual ball interface is intuitive but limited by the lack of physical feedback, and (3) the spatial overlay is very useful in enhancing the users' situational awareness.",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://pibu-labs.github.io/IGUANA"
+    }
+  }
+  </script>
+  <!-- TODO: add above: "citation": "BIBTEX_CITATION_HERE", -->
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Technische Universität Dresden",
+    "url": "https://tu-dresden.de",
+    "logo": "https://tu-dresden.de/favicon.ico"
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">IGUANA: Immersive Guidance, Navigation, and Control<br>for Consumer UAV</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://orcid.org/0009-0005-2434-6318" target="_blank">Victor Victor</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://orcid.org/0009-0000-2369-7371" target="_blank">Tania Krisanty</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://orcid.org/0000-0002-8923-6284" target="_blank">Matthew McGinity</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://orcid.org/0000-0003-2467-5734" target="_blank">Stefan Gumhold</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://orcid.org/0000-0002-3513-6448" target="_blank">Uwe Aßmann</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">Technische Universität Dresden<br><a href="https://vrst.acm.org/vrst2025/" target="_blank">VRST 2025</a></span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Both authors contributed equally to this research</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://doi.org/10.1145/3756884.3766033" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/PiBu-Labs/IGUANA" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://doi.org/10.48550/arXiv.2510.07609" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Youtube video -->
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/_vc0eyOeorM?cc_load_policy=1&cc_lang_pref=en" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            As the markets for unmanned aerial vehicles (UAVs) and mixed reality (MR) headsets continue to grow, recent research has increasingly explored their integration, which enables more intuitive, immersive, and situationally aware control systems.
+            We present IGUANA, an MR-based immersive guidance, navigation, and control system for consumer UAVs.
+            IGUANA introduces three key elements beyond conventional control interfaces: (1) a 3D terrain map interface with draggable waypoint markers and live camera preview for high-level control, (2) a novel spatial control metaphor that uses a virtual ball as a physical analogy for low-level control, and (3) a spatial overlay that helps track the UAV when it is not visible with the naked eye or visual line of sight is interrupted.
+            We conducted a user study to evaluate our design, both quantitatively and qualitatively, and found that (1) the 3D map interface is intuitive and easy to use, relieving users from manual control and suggesting improved accuracy and consistency with lower perceived workload relative to conventional dual-stick controller, (2) the virtual ball interface is intuitive but limited by the lack of physical feedback, and (3) the spatial overlay is very useful in enhancing the users' situational awareness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
